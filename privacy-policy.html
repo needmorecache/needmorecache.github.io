@@ -80,7 +80,8 @@
       <h2 style="font-size:0.95rem; border:none; padding:0; margin-bottom:0.5rem;">2-1. Account information</h2>
       <p>The app uses <strong>anonymous sign-in by default</strong>. No personal information is required to play. If you optionally link a Google or Apple account to back up your records, we receive:</p>
       <ul>
-        <li>A unique user ID (from Google or Apple) — we never store your name, email, or profile photo unless you set a display name inside the app.</li>
+        <li>A unique user ID. When you sign in with Google or Apple, the authentication provider (Firebase Authentication) may retain your email address and name to enable sign-in.</li>
+        <li>Our game servers (ranking database) store only your display name and country code — we do not collect your profile photo.</li>
         <li>Display name (optional, set by you in-app).</li>
       </ul>
 
@@ -93,16 +94,16 @@
 
       <h2 style="font-size:0.95rem; border:none; padding:0; margin-bottom:0.5rem; margin-top:1rem;">2-3. Automatically collected data</h2>
       <ul>
-        <li>Device type and OS version (collected by Firebase Analytics for crash reporting)</li>
-        <li>App usage events (via Firebase Analytics)</li>
+        <li>Crash logs, device model, OS version, and app version (collected by Firebase Crashlytics to diagnose crashes and improve stability)</li>
       </ul>
+      <p style="font-size:0.85rem; color:var(--muted);">We do not use general usage analytics (e.g. Firebase Analytics is not integrated).</p>
     </section>
 
     <section>
       <h2>3. How We Use Your Information</h2>
       <ul>
         <li>To provide game functionality (leaderboards, cloud backup of records)</li>
-        <li>To improve the app (crash analysis, usage patterns)</li>
+        <li>To improve the app (crash and stability analysis)</li>
         <li>We do <strong>not</strong> sell your data or use it for targeted advertising</li>
       </ul>
     </section>
@@ -111,10 +112,10 @@
       <h2>4. Third-Party Services</h2>
       <p>The app uses the following third-party services. Each has its own privacy policy:</p>
       <ul>
-        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Google)</a> — Authentication, Cloud Firestore database, Analytics</li>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Google)</a> — Authentication, Cloud Firestore database, Crashlytics (crash reporting)</li>
         <li><a href="https://policies.google.com/privacy" target="_blank">Google Sign-In</a> — Optional account linking</li>
         <li><a href="https://www.apple.com/legal/privacy/" target="_blank">Sign in with Apple</a> — Optional account linking (iOS only)</li>
-        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a> — In-app advertising (shown in some versions of the app)</li>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a> — Advertising SDK bundled in the app, but not active in the current release (no ads are shown)</li>
       </ul>
     </section>
 
@@ -159,7 +160,8 @@
       <h2 style="font-size:0.95rem; border:none; padding:0; margin-bottom:0.5rem;">2-1. 계정 정보</h2>
       <p>앱은 기본적으로 <strong>익명 로그인</strong>을 사용합니다. 게임 플레이에 개인정보는 필요하지 않습니다. Google 또는 Apple 계정으로 선택적 백업 연동 시 다음 정보를 수신합니다:</p>
       <ul>
-        <li>고유 사용자 ID (Google 또는 Apple에서 발급) — 이름, 이메일, 프로필 사진은 저장하지 않습니다. 앱 내에서 직접 설정한 닉네임만 저장합니다.</li>
+        <li>고유 사용자 ID. Google 또는 Apple 로그인 시 인증 제공자(Firebase Authentication)가 로그인 처리를 위해 이메일·이름을 보관할 수 있습니다.</li>
+        <li>당사 게임 서버(랭킹 DB)에는 닉네임과 국가 코드만 저장하며, 프로필 사진은 수집하지 않습니다.</li>
         <li>닉네임 (선택 사항, 앱 내에서 직접 설정)</li>
       </ul>
 
@@ -172,16 +174,16 @@
 
       <h2 style="font-size:0.95rem; border:none; padding:0; margin-bottom:0.5rem; margin-top:1rem;">2-3. 자동 수집 정보</h2>
       <ul>
-        <li>기기 종류 및 OS 버전 (Firebase Analytics의 충돌 리포트용)</li>
-        <li>앱 사용 이벤트 (Firebase Analytics)</li>
+        <li>충돌 로그, 기기 모델, OS 버전, 앱 버전 (Firebase Crashlytics — 충돌 진단 및 안정성 개선용)</li>
       </ul>
+      <p style="font-size:0.85rem; color:var(--muted);">일반 사용 분석은 수집하지 않습니다 (Firebase Analytics 미연동).</p>
     </section>
 
     <section>
       <h2>3. 정보 이용 목적</h2>
       <ul>
         <li>게임 기능 제공 (리더보드, 기록 클라우드 백업)</li>
-        <li>앱 개선 (충돌 분석, 사용 패턴 파악)</li>
+        <li>앱 개선 (충돌 및 안정성 분석)</li>
         <li>수집한 정보를 <strong>판매하거나 타겟 광고에 활용하지 않습니다.</strong></li>
       </ul>
     </section>
@@ -190,10 +192,10 @@
       <h2>4. 제3자 서비스</h2>
       <p>앱은 다음 제3자 서비스를 사용합니다. 각 서비스는 자체 개인정보처리방침을 가집니다:</p>
       <ul>
-        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Google)</a> — 인증, Cloud Firestore 데이터베이스, Analytics</li>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Google)</a> — 인증, Cloud Firestore 데이터베이스, Crashlytics (충돌 리포트)</li>
         <li><a href="https://policies.google.com/privacy" target="_blank">Google 로그인</a> — 선택적 계정 연동</li>
         <li><a href="https://www.apple.com/legal/privacy/ko/" target="_blank">Apple로 로그인</a> — 선택적 계정 연동 (iOS 전용)</li>
-        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a> — 인앱 광고 (일부 버전에서 표시)</li>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a> — 광고 SDK가 앱에 포함되어 있으나 현재 출시 버전에서는 비활성 (광고 미표시)</li>
       </ul>
     </section>
 
