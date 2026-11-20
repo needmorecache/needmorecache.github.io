@@ -58,8 +58,8 @@
 <div class="container">
   <header>
     <h1>Privacy Policy</h1>
-    <p class="subtitle" id="updated-en">Last updated: June 30, 2026</p>
-    <p class="subtitle hidden" id="updated-ko">최종 수정: 2026년 6월 30일</p>
+    <p class="subtitle" id="updated-en">Last updated: November 20, 2026</p>
+    <p class="subtitle hidden" id="updated-ko">최종 수정: 2026년 11월 20일</p>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('en')">English</button>
       <button class="lang-btn" onclick="setLang('ko')">한국어</button>
@@ -81,30 +81,35 @@
       <p>The app uses <strong>anonymous sign-in by default</strong>. No personal information is required to play. If you optionally link a Google or Apple account to back up your records, we receive:</p>
       <ul>
         <li>A unique user ID. When you sign in with Google or Apple, the authentication provider (Firebase Authentication) may retain your email address and name to enable sign-in.</li>
-        <li>Our game servers (ranking database) store only your display name and country code — we do not collect your profile photo.</li>
+        <li>Whether or not you link an account, our game servers store your display name, country code, and your game records and statistics (see 2-2) — we do not collect your profile photo.</li>
         <li>Display name (optional, set by you in-app).</li>
       </ul>
 
       <h2 style="font-size:0.95rem; border:none; padding:0; margin-bottom:0.5rem; margin-top:1rem;">2-2. Game records</h2>
       <ul>
         <li>Scores, combo counts, and best records (stored locally and, if you sign in, in cloud)</li>
-        <li>Country code (used for regional leaderboards — selected by you in-app)</li>
+        <li>Country code (used for regional leaderboards — set automatically from your device's region setting, or a default when your device does not report one; where the option is offered, you can change it in Settings)</li>
         <li>Replay snippets (game move sequences for the Blind mode replay feature — retained for up to 90 days)</li>
+        <li>Records of individual games you finish (mode, score, combo, duration, move and board records, platform and app version) — used to verify scores and keep rankings fair. Each game record is retained for up to 30 days (up to 400 days for games that used purchased items or set a personal best); totals derived from them (such as games played and best records) are kept until you delete your account.</li>
       </ul>
 
       <h2 style="font-size:0.95rem; border:none; padding:0; margin-bottom:0.5rem; margin-top:1rem;">2-3. Automatically collected data</h2>
       <ul>
         <li>Crash logs, device model, OS version, and app version (collected by Firebase Crashlytics to diagnose crashes and improve stability)</li>
+        <li>App usage events (collected by Google Analytics for Firebase): for example app opens, screens viewed, game start and end with mode, score and duration, use of undo and revive, and ad offers and results — together with an app instance identifier, app version, platform, app language, sign-in status and your ranking country code. We use these only to understand how the app is used. Advertising-related signals in Analytics are set to "denied", and we do not send your account ID to Analytics.</li>
+        <li>Device identifier for guest accounts (the Android device ID, or on iOS a random ID the app keeps in the device keychain): when you play without signing in, the app sends it to our server so a guest account can be restored after you reinstall the app, and to stop one device from creating many ranking accounts. The server stores only a one-way hash of it, linked to your guest account, and deletes that link when you delete your account. It is not used for advertising.</li>
+        <li>Advertising data (collected by Google AdMob when ads are shown): device identifiers, IP address (used to estimate approximate location), product interactions (such as app launches, taps and video views), advertising data (such as the ads you have seen), crash logs, and performance data. See section 4.</li>
       </ul>
-      <p style="font-size:0.85rem; color:var(--muted);">We do not use general usage analytics (e.g. Firebase Analytics is not integrated).</p>
     </section>
 
     <section>
       <h2>3. How We Use Your Information</h2>
       <ul>
         <li>To provide game functionality (leaderboards, cloud backup of records)</li>
-        <li>To improve the app (crash and stability analysis)</li>
-        <li>We do <strong>not</strong> sell your data or use it for targeted advertising</li>
+        <li>To improve the app (crash and stability analysis, usage statistics)</li>
+        <li>To restore guest accounts and keep rankings fair (preventing one device from creating many accounts)</li>
+        <li>To show ads, including rewarded ads that you choose to watch in exchange for an in-app benefit</li>
+        <li>We do <strong>not</strong> sell your data, and we do not share your account information or game records with advertisers</li>
       </ul>
     </section>
 
@@ -112,11 +117,12 @@
       <h2>4. Third-Party Services</h2>
       <p>The app uses the following third-party services. Each has its own privacy policy:</p>
       <ul>
-        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Google)</a> — Authentication, Cloud Firestore database, Crashlytics (crash reporting)</li>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Google)</a> — Authentication, Cloud Firestore database, Crashlytics (crash reporting), Google Analytics for Firebase (usage statistics), Remote Config (app settings), App Check (app integrity)</li>
         <li><a href="https://policies.google.com/privacy" target="_blank">Google Sign-In</a> — Optional account linking</li>
         <li><a href="https://www.apple.com/legal/privacy/" target="_blank">Sign in with Apple</a> — Optional account linking (iOS only)</li>
-        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a> — Advertising SDK bundled in the app, but not active in the current release (no ads are shown)</li>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a> — Shows ads in the app (native ads and optional rewarded ads). See <a href="https://policies.google.com/technologies/partner-sites" target="_blank">how Google uses information from apps that use its services</a>.</li>
       </ul>
+      <p>Where the law requires it (for example in the EEA and the UK), the app asks for your consent through Google's consent form before ads are personalized. On iOS, the app does not request permission to track you (App Tracking Transparency), so the advertising identifier (IDFA) is not available to the ad SDK. Depending on your region, device settings and consent, Google may show personalized or non-personalized ads; you can manage ad personalization in your device settings and at <a href="https://adssettings.google.com" target="_blank">Google Ad Settings</a>.</p>
     </section>
 
     <section>
@@ -126,7 +132,7 @@
         <li>Open the app → <strong>Settings → Data → Delete Account</strong></li>
         <li>This permanently deletes your Firebase Auth account, all cloud records (rankings, profile), and local device data.</li>
       </ul>
-      <p>Replay snippets are automatically deleted after 90 days. Anonymous accounts not linked to Google or Apple are deleted along with their data when you use the in-app delete function or uninstall the app and reinstall (a new anonymous account is created).</p>
+      <p>Replay snippets are automatically deleted after 90 days. Anonymous accounts not linked to Google or Apple are deleted along with their data when you use the in-app delete function.</p>
     </section>
 
     <section>
@@ -161,30 +167,35 @@
       <p>앱은 기본적으로 <strong>익명 로그인</strong>을 사용합니다. 게임 플레이에 개인정보는 필요하지 않습니다. Google 또는 Apple 계정으로 선택적 백업 연동 시 다음 정보를 수신합니다:</p>
       <ul>
         <li>고유 사용자 ID. Google 또는 Apple 로그인 시 인증 제공자(Firebase Authentication)가 로그인 처리를 위해 이메일·이름을 보관할 수 있습니다.</li>
-        <li>당사 게임 서버(랭킹 DB)에는 닉네임과 국가 코드만 저장하며, 프로필 사진은 수집하지 않습니다.</li>
+        <li>계정 연동 여부와 관계없이 당사 게임 서버에는 닉네임, 국가 코드, 게임 기록과 통계(2-2 참고)를 저장하며, 프로필 사진은 수집하지 않습니다.</li>
         <li>닉네임 (선택 사항, 앱 내에서 직접 설정)</li>
       </ul>
 
       <h2 style="font-size:0.95rem; border:none; padding:0; margin-bottom:0.5rem; margin-top:1rem;">2-2. 게임 기록</h2>
       <ul>
         <li>점수, 콤보 수, 최고 기록 (로컬 저장 및 로그인 시 클라우드 저장)</li>
-        <li>국가 코드 (지역 랭킹용 — 앱 내에서 직접 선택)</li>
+        <li>국가 코드 (지역 랭킹용 — 기기의 지역 설정으로 자동 지정되며(기기가 지역을 알려주지 않으면 기본값), 변경 기능이 제공되는 경우 설정에서 바꿀 수 있음)</li>
         <li>리플레이 스니펫 (Blind 모드 리플레이용 게임 수 시퀀스 — 최대 90일 보관)</li>
+        <li>끝낸 판의 기록 (모드, 점수, 콤보, 플레이 시간, 수·보드 기록, 플랫폼·앱 버전) — 점수 검증과 공정한 랭킹 유지용. 판별 기록은 최대 30일 보관하며(구매한 아이템을 썼거나 최고 기록을 세운 판은 최대 400일), 이를 합산한 통계(플레이 수·최고 기록 등)는 계정을 삭제할 때까지 보관합니다.</li>
       </ul>
 
       <h2 style="font-size:0.95rem; border:none; padding:0; margin-bottom:0.5rem; margin-top:1rem;">2-3. 자동 수집 정보</h2>
       <ul>
         <li>충돌 로그, 기기 모델, OS 버전, 앱 버전 (Firebase Crashlytics — 충돌 진단 및 안정성 개선용)</li>
+        <li>앱 사용 이벤트 (Google Analytics for Firebase): 예) 앱 실행, 본 화면, 판 시작·종료와 그 모드·점수·플레이 시간, 되돌리기·부활 사용, 광고 제안·결과 — 앱 인스턴스 식별자, 앱 버전, 플랫폼, 앱 언어, 로그인 여부, 랭킹 국가 코드와 함께 수집됩니다. 앱이 어떻게 쓰이는지 파악하는 데만 사용합니다. Analytics 의 광고 관련 신호는 "거부"로 설정되어 있으며, 계정 ID 를 Analytics 에 보내지 않습니다.</li>
+        <li>게스트 계정의 기기 식별자 (Android 기기 ID, iOS 는 앱이 기기 키체인에 저장하는 임의의 ID): 로그인하지 않고 플레이하면 앱을 다시 설치해도 게스트 계정을 되찾을 수 있도록, 그리고 한 기기가 랭킹 계정을 여러 개 만들지 못하도록 서버로 보냅니다. 서버에는 되돌릴 수 없는 해시값만 게스트 계정과 함께 저장하며, 계정을 삭제하면 그 연결도 삭제합니다. 광고에는 쓰지 않습니다.</li>
+        <li>광고 데이터 (광고가 표시될 때 Google AdMob 이 수집): 기기 식별자, IP 주소(대략적인 위치 추정용), 제품 상호작용(앱 실행·탭·동영상 시청 등), 광고 데이터(본 광고 등), 충돌 로그, 성능 데이터. 4항을 참고하세요.</li>
       </ul>
-      <p style="font-size:0.85rem; color:var(--muted);">일반 사용 분석은 수집하지 않습니다 (Firebase Analytics 미연동).</p>
     </section>
 
     <section>
       <h2>3. 정보 이용 목적</h2>
       <ul>
         <li>게임 기능 제공 (리더보드, 기록 클라우드 백업)</li>
-        <li>앱 개선 (충돌 및 안정성 분석)</li>
-        <li>수집한 정보를 <strong>판매하거나 타겟 광고에 활용하지 않습니다.</strong></li>
+        <li>앱 개선 (충돌 및 안정성 분석, 사용 통계)</li>
+        <li>게스트 계정 복구와 공정한 랭킹 유지 (한 기기가 계정을 여러 개 만드는 것 방지)</li>
+        <li>광고 표시 (앱 내 혜택을 받기 위해 직접 선택해 시청하는 보상형 광고 포함)</li>
+        <li>수집한 정보를 <strong>판매하지 않으며</strong>, 계정 정보와 게임 기록을 광고주와 공유하지 않습니다.</li>
       </ul>
     </section>
 
@@ -192,11 +203,12 @@
       <h2>4. 제3자 서비스</h2>
       <p>앱은 다음 제3자 서비스를 사용합니다. 각 서비스는 자체 개인정보처리방침을 가집니다:</p>
       <ul>
-        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Google)</a> — 인증, Cloud Firestore 데이터베이스, Crashlytics (충돌 리포트)</li>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Google)</a> — 인증, Cloud Firestore 데이터베이스, Crashlytics (충돌 리포트), Google Analytics for Firebase (사용 통계), Remote Config (앱 설정), App Check (앱 무결성 확인)</li>
         <li><a href="https://policies.google.com/privacy" target="_blank">Google 로그인</a> — 선택적 계정 연동</li>
         <li><a href="https://www.apple.com/legal/privacy/ko/" target="_blank">Apple로 로그인</a> — 선택적 계정 연동 (iOS 전용)</li>
-        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a> — 광고 SDK가 앱에 포함되어 있으나 현재 출시 버전에서는 비활성 (광고 미표시)</li>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a> — 앱 내 광고 표시 (네이티브 광고, 선택형 보상형 광고). <a href="https://policies.google.com/technologies/partner-sites" target="_blank">Google 이 서비스를 사용하는 앱의 정보를 사용하는 방식</a>을 참고하세요.</li>
       </ul>
+      <p>법이 요구하는 지역(예: EEA·영국)에서는 광고를 개인화하기 전에 Google 동의 양식으로 동의를 받습니다. iOS 에서는 추적 허용(App Tracking Transparency)을 요청하지 않으므로 광고 SDK 가 광고 식별자(IDFA)를 받을 수 없습니다. 지역·기기 설정·동의 여부에 따라 Google 이 개인화 또는 비개인화 광고를 표시할 수 있으며, 광고 개인화는 기기 설정과 <a href="https://adssettings.google.com" target="_blank">Google 광고 설정</a>에서 관리할 수 있습니다.</p>
     </section>
 
     <section>
