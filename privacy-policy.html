@@ -58,8 +58,8 @@
 <div class="container">
   <header>
     <h1>Privacy Policy</h1>
-    <p class="subtitle" id="updated-en">Last updated: November 20, 2026</p>
-    <p class="subtitle hidden" id="updated-ko">최종 수정: 2026년 11월 20일</p>
+    <p class="subtitle" id="updated-en">Last updated: November 27, 2026</p>
+    <p class="subtitle hidden" id="updated-ko">최종 수정: 2026년 11월 27일</p>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('en')">English</button>
       <button class="lang-btn" onclick="setLang('ko')">한국어</button>
@@ -97,7 +97,7 @@
       <ul>
         <li>Crash logs, device model, OS version, and app version (collected by Firebase Crashlytics to diagnose crashes and improve stability)</li>
         <li>App usage events (collected by Google Analytics for Firebase): for example app opens, screens viewed, game start and end with mode, score and duration, use of undo and revive, and ad offers and results — together with an app instance identifier, app version, platform, app language, sign-in status and your ranking country code. We use these only to understand how the app is used. Advertising-related signals in Analytics are set to "denied", and we do not send your account ID to Analytics.</li>
-        <li>Device identifier for guest accounts (the Android device ID, or on iOS a random ID the app keeps in the device keychain): when you play without signing in, the app sends it to our server so a guest account can be restored after you reinstall the app, and to stop one device from creating many ranking accounts. The server stores only a one-way hash of it, linked to your guest account, and deletes that link when you delete your account. It is not used for advertising.</li>
+        <li>Device identifier for guest accounts (the Android device ID, or on iOS a random ID the app keeps in the device keychain): when you play without signing in, the app sends it to our server so a guest account can be restored after you reinstall the app, and to stop one device from creating many ranking accounts. The server stores only a one-way hash of it. While you play as a guest, the hash is linked to your guest account. That link is removed right away when you delete your account; if you link a Google or Apple account instead, it is removed the next time a guest session starts on the same device. Either way we keep the hash together with the platform, the dates it was first used and closed, and why it was closed — without your account ID — so the same device cannot claim a new guest ranking spot. This record is not deleted automatically. It is not used for advertising.</li>
         <li>Advertising data (collected by Google AdMob when ads are shown): device identifiers, IP address (used to estimate approximate location), product interactions (such as app launches, taps and video views), advertising data (such as the ads you have seen), crash logs, and performance data. See section 4.</li>
       </ul>
     </section>
@@ -133,6 +133,7 @@
         <li>This permanently deletes your Firebase Auth account, all cloud records (rankings, profile), and local device data.</li>
       </ul>
       <p>Replay snippets are automatically deleted after 90 days. Anonymous accounts not linked to Google or Apple are deleted along with their data when you use the in-app delete function.</p>
+      <p>One exception: the one-way hash of a guest device identifier is kept after account deletion, with no link to your account, to stop one device from creating many ranking accounts (see section 2).</p>
     </section>
 
     <section>
@@ -183,7 +184,7 @@
       <ul>
         <li>충돌 로그, 기기 모델, OS 버전, 앱 버전 (Firebase Crashlytics — 충돌 진단 및 안정성 개선용)</li>
         <li>앱 사용 이벤트 (Google Analytics for Firebase): 예) 앱 실행, 본 화면, 판 시작·종료와 그 모드·점수·플레이 시간, 되돌리기·부활 사용, 광고 제안·결과 — 앱 인스턴스 식별자, 앱 버전, 플랫폼, 앱 언어, 로그인 여부, 랭킹 국가 코드와 함께 수집됩니다. 앱이 어떻게 쓰이는지 파악하는 데만 사용합니다. Analytics 의 광고 관련 신호는 "거부"로 설정되어 있으며, 계정 ID 를 Analytics 에 보내지 않습니다.</li>
-        <li>게스트 계정의 기기 식별자 (Android 기기 ID, iOS 는 앱이 기기 키체인에 저장하는 임의의 ID): 로그인하지 않고 플레이하면 앱을 다시 설치해도 게스트 계정을 되찾을 수 있도록, 그리고 한 기기가 랭킹 계정을 여러 개 만들지 못하도록 서버로 보냅니다. 서버에는 되돌릴 수 없는 해시값만 게스트 계정과 함께 저장하며, 계정을 삭제하면 그 연결도 삭제합니다. 광고에는 쓰지 않습니다.</li>
+        <li>게스트 계정의 기기 식별자 (Android 기기 ID, iOS 는 앱이 기기 키체인에 저장하는 임의의 ID): 로그인하지 않고 플레이하면 앱을 다시 설치해도 게스트 계정을 되찾을 수 있도록, 그리고 한 기기가 랭킹 계정을 여러 개 만들지 못하도록 서버로 보냅니다. 서버에는 되돌릴 수 없는 해시값만 저장합니다. 게스트로 쓰는 동안에는 그 해시가 게스트 계정과 연결되어 있습니다. 계정을 삭제하면 그 연결이 바로 지워지고, Google·Apple 계정을 연동한 경우에는 같은 기기에서 다음에 게스트로 접속할 때 지워집니다. 어느 경우든 같은 기기가 새 게스트 랭킹 자리를 다시 얻지 못하도록 해시값과 플랫폼, 처음 쓴 날짜와 닫힌 날짜, 닫힌 이유는 계정 ID 없이 계속 보관하며, 이 기록은 자동으로 삭제되지 않습니다. 광고에는 쓰지 않습니다.</li>
         <li>광고 데이터 (광고가 표시될 때 Google AdMob 이 수집): 기기 식별자, IP 주소(대략적인 위치 추정용), 제품 상호작용(앱 실행·탭·동영상 시청 등), 광고 데이터(본 광고 등), 충돌 로그, 성능 데이터. 4항을 참고하세요.</li>
       </ul>
     </section>
@@ -219,6 +220,7 @@
         <li>Firebase Auth 계정, 모든 클라우드 기록(랭킹, 프로필), 기기 내 로컬 데이터가 영구 삭제됩니다.</li>
       </ul>
       <p>리플레이 스니펫은 90일 후 자동 삭제됩니다. Google/Apple 계정 연동 없이 익명으로만 사용한 계정은 앱 내 삭제 기능 사용 시 함께 삭제됩니다.</p>
+      <p>예외: 게스트 기기 식별자의 해시값은 한 기기가 랭킹 계정을 여러 개 만들지 못하도록 계정 삭제 뒤에도 계정과의 연결 없이 보관됩니다(2항 참고).</p>
     </section>
 
     <section>
